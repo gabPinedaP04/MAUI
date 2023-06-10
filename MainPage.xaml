@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="todolist.MainPage">
+
+
+    <Grid RowDefinitions=".1*"
+          ColumnDefinitions=".6*">
+
+        <Grid.Background>
+
+            <LinearGradientBrush StartPoint="1,1"
+                                 EndPoint="0,0">
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="#ffffff"></GradientStop>
+                    <GradientStop Offset="0.6" Color="#00a0ff"></GradientStop>
+                    <GradientStop Offset="0.9" Color="#2675ff"></GradientStop>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+
+        </Grid.Background>
+
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="0" Margin="50" >
+
+            <Entry Placeholder="Agregar tarea" Margin="10,15,20,25" x:Name="entryTexto" IsVisible="false"/>
+            <Button Text="Agregar tarea" x:Name="btnAgregar" Clicked="btnAgregar_Clicked" BackgroundColor="CadetBlue" TextColor="White" FontFamily="apple">
+            </Button>
+            <Button Text="Agregar tarea" x:Name="btnAnadir" Clicked="btnAnadir_Clicked" IsVisible="false" TextColor="White" BackgroundColor="green" FontFamily="apple"></Button>
+
+
+
+            <HorizontalStackLayout HorizontalOptions="Start">
+                <VerticalStackLayout x:Name="MyStack" VerticalOptions="Start" Grid.Row="0" Margin="50" >
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+
+
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>
